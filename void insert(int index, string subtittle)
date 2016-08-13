@@ -1,0 +1,44 @@
+#ifndef Subject_registration
+#define Subject_registration
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+void insert(int index, string subtittle)
+{
+
+     ListNode *newPtr = new ListNode;
+
+	 newPtr->Subject_name=Sbname;
+	 newPtr->Subject_ID=SbID;
+	 newPtr->Subject_type=Sbtype;
+
+     
+	 if (index == 1)
+	 {   
+	 if(size==0)
+	 {
+       head=newPtr;
+       tail=newPtr;
+       newPtr->next = NULL;
+       newPtr->prev = NULL;
+      }
+      else
+      {
+       newPtr->next=head;
+       newPtr->prev = NULL;
+       head->prev=newPtr;
+       head=newPtr;
+      }
+	 }
+	 else if(index==size+1)
+	
+	 {
+      ListNode *cur = tail;
+      newPtr->prev = cur;
+      newPtr->next = NULL;
+      cur->next=newPtr;
+      tail = newPtr;
+      cur=NULL;
