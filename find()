@@ -1,0 +1,29 @@
+#ifndef Subject_registration
+#define Subject_registration
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+void LinkedList::find(int index)
+{
+    Node* searchnumber = nullptr;
+    temp = head;
+    current = head;
+
+    while (current != NULL && current->number != searchNum)
+    {
+        temp = current;
+        current = current->next;
+    }
+    if (current != NULL)
+    {
+        searchnumber = current;
+        current = current->next;
+        cout << "-" << searchnumber << " Found";
+    }
+    else
+    {
+        cout << "Not found!";
+    }
+};
