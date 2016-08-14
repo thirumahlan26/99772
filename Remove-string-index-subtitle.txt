@@ -1,0 +1,52 @@
+#ifndef Subject_registration
+#define Subject_registration
+
+#include<iostream>
+#include<string.
+
+using namespace std;
+
+void remove (int index, string subtitle)
+{
+   ListNode *cur;
+   --size;
+   if(isEmpty())
+   {
+       cout<<"Please enter value"<<endl;
+       return;
+   }
+   
+   else if (index == 1)
+   {
+      cur = head;
+      head = head->next;
+      head->prev = NULL;
+      delete cur;
+      cur = NULL;
+   }
+   
+   else if (index == 1)
+   {
+      cur = head;
+      head = head -> next;
+      head->prev = NULL;
+      delete cur;
+      cur = NULL;
+    }
+    
+    else if (index-1 == getLength())
+    {
+       ListNode *cur = find(index, subtitle);
+       tail = cur->prev;
+       cur->prev->next = NULL;
+    }
+    
+    else
+    {
+       ListNode *cur = find(index);
+       (cur->prev)->next=cur->next;
+       (cur->next)->prev = cur->prev;
+       delete cur;
+       cur = NULL;
+    }
+}
