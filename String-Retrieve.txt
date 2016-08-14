@@ -1,0 +1,23 @@
+#ifndef Subject_registration
+#define Subject_registration
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+
+string retrieve(int index)
+
+     if ((index < 1)|| (index > getLength()))
+     {
+                cout<<"invalid index."<<endl;
+                return;
+     }
+
+         ListNode *cur = find(index);
+         Sbname = cur -> Subject_name;
+         SbID= cur -> Subject_ID ;
+	 Sbtype = cur -> Subject_type;
+        
+}
